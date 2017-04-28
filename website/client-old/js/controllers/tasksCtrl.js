@@ -11,6 +11,10 @@ habitrpg.controller("TasksCtrl", ['$scope', '$rootScope', '$location', 'User','N
       return Shared.count.remainingGearInSet(gear, 'armoire');
     };
 
+    $scope.equipmentEarnedCount = function(gear) {
+      equipmentEarnedCount = Shared.count.equipmentEarned(gear.owned); 
+    }
+
     function scoreTask (task, direction) {
       switch (task.type) {
           case 'reward':
@@ -241,6 +245,22 @@ habitrpg.controller("TasksCtrl", ['$scope', '$rootScope', '$location', 'User','N
 
     $scope.$watch('user.items.gear.owned', function(){
       $scope.itemStore = Shared.updateStore(User.user);
+
+      let equipmentEarnedAchievements = { 
+        1: User.user.achievements.equipmentEarned1,
+        10: User.user.achievements.equipmentEarned10,
+        25: User.user.achievements.equipmentEarned25,
+        50: User.user.achievements.equipmentEarned50,
+        100: User.user.achievements.equipmentEarned100,
+      } 
+
+      for (let achievementReq in equipmentEarnedAchievements) {
+        if ($scope.equipmentEarnedCount >= achievementReq) {
+          equipmentEarnedAchievements[achievementReq] = true;
+        } else {
+          break;
+        }
+      }
     },true);
 
     $scope.healthPotion = Content.potion;

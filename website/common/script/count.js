@@ -52,6 +52,10 @@ function remainingGearInSet (userGear = {}, set) {
   return count;
 }
 
+function equipmentEarned (userGear = {}) {
+  return size(userGear);
+}
+
 function questsOfCategory (userQuests = {}, category) {
   let quests = filter(content.quests, (quest) => {
     let categoryMatches = quest.category === category;
@@ -70,5 +74,6 @@ module.exports = {
   dropPetsCurrentlyOwned,
   mountMasterProgress,
   remainingGearInSet,
+  equipmentEarned,
   questsOfCategory,
 };

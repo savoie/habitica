@@ -5,6 +5,11 @@
   "groupBy": "Group By <%= type %>",
   "classBonus": "(This item matches your class, so it gets an additional 1.5 stat multiplier.)",
 
+  "equipmentEarnedSingular": "Earned 1 Piece of Equipment",
+  "equipmentEarnedPlural": "Earned X Pieces of Equipment",
+  "equipmentEarnedSingularText": "This user is gearing up! Earned 1 piece of equipment!",
+  "equipmentEarnedPluralText": "This user is gearing up! Earned X pieces of equipment!",
+
   "weapon": "weapon",
   "weaponCapitalized" : "Weapon",
 

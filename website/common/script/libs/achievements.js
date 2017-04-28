@@ -183,6 +183,12 @@ function _getBasicAchievements (user, language) {
   _addSimple(result, user, {path: 'royallyLoyal', language});
   _addSimple(result, user, {path: 'joinedChallenge', language});
 
+  _addSimple(result, user, {path: 'equipmentEarned1', language});
+  _addSimple(result, user, {path: 'equipmentEarned10', language});
+  _addSimple(result, user, {path: 'equipmentEarned25', language});
+  _addSimple(result, user, {path: 'equipmentEarned50', language});
+  _addSimple(result, user, {path: 'equipmentEarned100', language});
+
   _addSimpleWithMasterCount(result, user, {path: 'beastMaster', language});
   _addSimpleWithMasterCount(result, user, {path: 'mountMaster', language});
   _addSimpleWithMasterCount(result, user, {path: 'triadBingo', language});

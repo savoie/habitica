@@ -219,6 +219,24 @@ schema.pre('save', true, function preSaveUser (next, done) {
       this.achievements.triadBingo = true;
     }
 
+    let equipmentEarnedCount = shared.count.equipmentEarned(this.items.gear.owned);
+    let equipmentEarnedAchievements = {
+      1: this.achievements.equipmentEarned1,
+      10: this.achievements.equipmentEarned10,
+      25: this.achievements.equipmentEarned25,
+      50: this.achievements.equipmentEarned50,
+      100: this.achievements.equipmentEarned100,
+    }
+
+    for (let achievementReq in equipmentEarnedAchievements) {
+      if (equipmentEarnedCount >= achievementReq) {
+        equipmentEarnedAchievements[achievementReq] = true;
+        Achievement.displayAchievement('equipmentEarned' + achievementReq);
+      } else {
+        break;
+      }
+    }
+
     // EXAMPLE CODE for allowing all existing and new players to be
     // automatically granted an item during a certain time period:
     // if (!this.items.pets['JackOLantern-Base'] && moment().isBefore('2014-11-01'))

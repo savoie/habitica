@@ -116,6 +116,11 @@ let schema = new Schema({
     royallyLoyal: Boolean,
     joinedGuild: Boolean,
     joinedChallenge: Boolean,
+    equipmentEarned1: Boolean,
+    equipmentEarned10: Boolean,
+    equipmentEarned25: Boolean,
+    equipmentEarned50: Boolean,
+    equipmentEarned100: Boolean,
   },
 
   backer: {

@@ -115,6 +115,35 @@ let basicAchievs = {
 };
 Object.assign(achievementsData, basicAchievs);
 
+let equipmentAchievs = {
+  equipmentEarned1: {
+    icon: 'achievement-earned-equipment-1',
+    titleKey: 'equipmentEarnedSingular',
+    textKey: 'equipmentEarnedSingularText',
+  },
+  equipmentEarned10: {
+    icon: 'achievement-earned-equipment-10',
+    titleKey: 'equipmentEarnedPlural',
+    textKey: 'equipmentEarnedPluralText',
+  },
+  equipmentEarned25: {
+    icon: 'achievement-earned-equipment-25',
+    titleKey: 'equipmentEarnedPlural',
+    textKey: 'equipmentEarnedPluralText',
+  },
+  equipmentEarned50: {
+    icon: 'achievement-earned-equipment-50',
+    titleKey: 'equipmentEarnedPlural',
+    textKey: 'equipmentEarnedPluralText',
+  },
+  equipmentEarned100: {
+    icon: 'achievement-earned-equipment-100',
+    titleKey: 'equipmentEarnedPlural',
+    textKey: 'equipmentEarnedPluralText',
+  },
+}
+Object.assign(achievementsData, equipmentAchievs);
+
 let specialAchievs = {
   contributor: {
     icon: 'achievement-boot',
